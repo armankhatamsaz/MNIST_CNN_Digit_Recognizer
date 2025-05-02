@@ -39,54 +39,41 @@ The CNN architecture is defined as follows:
 *   Matplotlib
 
 You can install the necessary libraries using pip:
-```bash
-pip install tensorflow numpy matplotlib
 
-
-(TensorBoard is typically included with the TensorFlow installation).
 
 ## Usage
 
-Clone the repository:
-
+1.   Clone the repository:
+```bash
 git clone https://github.com/armankhatamsaz/MNIST_CNN_Digit_Recognizer.git
 cd MNIST_CNN_Digit_Recognizer
+```
 
-Run the Jupyter Notebook:
+2.   Run the Jupyter Notebook:
 The primary file is MNIST_CNN_Digit_Recognizer.ipynb. You can run it using Jupyter Notebook or Jupyter Lab:
-
+```bash
 jupyter notebook MNIST_CNN_Digit_Recognizer.ipynb
-
+```
 Alternatively, you can upload and run the notebook directly in Google Colaboratory, which provides a free GPU environment suitable for training. The notebook includes Colab-specific commands (%tensorflow_version, %load_ext tensorboard, google.colab).
 
-Training: Execute the cells in the notebook sequentially. The MNIST dataset will be downloaded automatically if not found locally. The model will train for 5 epochs by default.
+3.   Training: Execute the cells in the notebook sequentially. The MNIST dataset will be downloaded automatically if not found locally. The model will train for 5 epochs by default.
+4.   Evaluation: After training, the model's accuracy on the test set will be printed.
+5.   Prediction Example: The code includes a cell to display test image #47 and print the model's prediction for it.
 
-Evaluation: After training, the model's accuracy on the test set will be printed.
-
-Prediction Example: The code includes a cell to display test image #47 and print the model's prediction for it.
-
-TensorBoard Integration
+## TensorBoard Integration
 
 Training logs (loss and accuracy for training and validation sets) are saved to the logs/scalars/ directory, organized by timestamp.
 
 To launch TensorBoard:
-
-Open a terminal in the project's root directory (MNIST_CNN_Digit_Recognizer).
-
-Run the following command:
-
+1.   Open a terminal in the project's root directory (MNIST_CNN_Digit_Recognizer).
+2.   Run the following command:
+```bash
 tensorboard --logdir logs
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
-Open your web browser and navigate to the URL provided by TensorBoard (usually http://localhost:6006).
+```
+3.   Open your web browser and navigate to the URL provided by TensorBoard (usually http://localhost:6006).
 
 You can monitor the training progress and analyze the metrics visually in TensorBoard.
 
-Results
+## Results
 
 The CNN model typically achieves high accuracy (often >98%) on the MNIST test set after 5 epochs of training. Exact results may vary slightly depending on the specific run and hardware.
