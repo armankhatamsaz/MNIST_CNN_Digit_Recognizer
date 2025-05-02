@@ -45,7 +45,7 @@ pip install tensorflow numpy matplotlib
 
 (TensorBoard is typically included with the TensorFlow installation).
 
-Usage
+## Usage
 
 Clone the repository:
 
